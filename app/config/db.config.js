@@ -1,8 +1,8 @@
 module.exports = {
-  HOST: "patchwork.czcsky1pfuhv.us-east-2.rds.amazonaws.com",
-  USER: "admin",
-  PASSWORD: "patchwork123?",
-  DB: "patchwork",
+  HOST: process.env.DB_HOST,
+  USER: process.env.DB_USER,
+  PASSWORD: process.env.DB_PASSWORD,
+  DB: process.env.DB_NAME,
   dialect: "mysql",
   pool: {
     max: 5,
