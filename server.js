@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static(path));
 
 var corsOptions = {
-  origin: "https://patchwork-full.herokuapp.com/"
+  origin: "https://patchwork-full.herokuapp.com"
 };
 
 app.use(cors(corsOptions));
