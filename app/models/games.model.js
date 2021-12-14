@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-  const Games = sequelize.define("games", {
+  const Games = sequelize.define("games_info", {
     urlHome: {
       type: Sequelize.STRING
     },
@@ -18,13 +18,10 @@ module.exports = (sequelize, Sequelize) => {
     serverStatus: {
       type: Sequelize.STRING
     },
-    developer: {
-      type: Sequelize.STRING
-    },
     currentPatch: {
       type: Sequelize.STRING
     },
-    title: {
+    game_id: {
       type: Sequelize.STRING
     }
   }, {
