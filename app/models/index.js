@@ -20,7 +20,8 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.accounts = require("./accounts.model.js")(sequelize, Sequelize);
-db.games = require("./games.model.js")(sequelize, Sequelize);
+db.games_info = require("./games_info.model.js")(sequelize, Sequelize);
 db.accounts_games = require("./accounts_games.model.js")(sequelize, Sequelize);
+db.master_games = require("./master_games.model.js")(sequelize, Sequelize);
 
 module.exports = db;

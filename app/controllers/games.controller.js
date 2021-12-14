@@ -15,7 +15,7 @@ exports.create = (req, res) => {
         title: req.body.title,
         urlHome: req.body.urlHome,
         urlSupport: req.body.urlSupport,
-        urlNews: req.body.urlSupport,
+        urlNews: req.body.urlNews,
         urlServer: req.body.urlServer,
         urlTwitter: req.body.urlTwitter,
         serverStatus: req.body.serverStatus,

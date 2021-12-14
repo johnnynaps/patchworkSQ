@@ -1,5 +1,10 @@
 module.exports = (sequelize, Sequelize) => {
   const Accounts = sequelize.define("accounts", {
+    account_id: {
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     email: {
       type: Sequelize.STRING
     },
