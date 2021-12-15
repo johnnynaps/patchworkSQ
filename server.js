@@ -3,11 +3,14 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = __dirname + '/app/views/';
 const app = express();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 app.use(express.static(path));
 
 var corsOptions = {
-  origin: "https://patchwork-full.herokuapp.com"
+  origin: process.env.HOST_URL
 };
 
 app.use(cors(corsOptions));
@@ -17,7 +20,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 const db = require("./app/models");
-
 db.sequelize.sync();
 
 app.get('/', function (req, res) {
